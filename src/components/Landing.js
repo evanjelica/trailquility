@@ -1,4 +1,6 @@
 import React from 'react';
+import '../css/Landing.css';
+
 import Typist from 'react-typist';
 
 export default function Landing(){
