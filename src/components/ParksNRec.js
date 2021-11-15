@@ -46,14 +46,14 @@ export default function ParksNRec(){
         })
     }
 
-    // Prints out the filters chosen by the user
+    /*// Prints out the filters chosen by the user
     const filterActivityList = (id) =>{
         setActivityFilter({
             ...parkList,
             data: parkList.data.filter((park) =>
                 park.activities.map((parkItem) => parkItem.id === id).includes(true))
         })
-    }
+    }*/
 
     // Clears activity selection
     const clear = () => {
