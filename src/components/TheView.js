@@ -13,8 +13,7 @@ export default function TheView(){
 
             <div className="footer-bonus">
                     <p>I like the view too.</p>
-                    <p>It's from <a href="https://www.pexels.com/video/tall-waterfall-5738272/" 
-                    target="_blank" className="p-bonus">this cool site.</a></p>
+                    <p>It's from <a className="p-bonus" href="https://www.pexels.com/video/tall-waterfall-5738272/">this cool site.</a></p>
                     <a className="link-bonus" href="/" >Click here to go back</a>
             </div>
         </div>

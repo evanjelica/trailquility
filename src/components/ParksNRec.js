@@ -1,5 +1,4 @@
 import React, {useEffect, useState} from 'react';
-import Button from '@mui/material/Button';
 import Header from './Header';
 import Activities from './Activities';
 import ParkCard from './ParkCard';
@@ -16,7 +15,7 @@ export default function ParksNRec(){
     const [activitySelection, setActivitySelection] = useState([]);
     const [parkList, setParkList] = useState([]);
     const [loading, setLoading] = useState(true);
-    const [activityFilter,setActivityFilter] = useState([]);
+ //   const [activityFilter,setActivityFilter] = useState([]);
 
      // Initially renders component once to fetch API data
     useEffect(() => {
