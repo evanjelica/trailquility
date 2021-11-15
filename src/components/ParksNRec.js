@@ -6,6 +6,7 @@ import ParkCard from './ParkCard';
 
 import '../css/MainStyle.css';
 
+// Key used to access all of the parks from the API
 const url =
   'https://developer.nps.gov/api/v1/parks?limit=496&api_key=D855RRWRdxxbOPhPBfKd8HQfj4rt0kBtFCNKqNVa';
 
@@ -17,7 +18,7 @@ export default function ParksNRec(){
     const [loading, setLoading] = useState(true);
     const [activityFilter,setActivityFilter] = useState([]);
 
-
+     // Initially renders component once to fetch API data
     useEffect(() => {
         fetchData()
     }, [])
@@ -46,6 +47,7 @@ export default function ParksNRec(){
         })
     }
 
+    // Prints out the filters chosen by the user
     const filterActivityList = (id) =>{
         setActivityFilter({
             ...parkList,
@@ -74,6 +76,7 @@ export default function ParksNRec(){
                 <Header/>
                 
                 <div className="glass-container">
+                    
                     <p className="glass-font">National parks are nature's bounty of activities!
                     <br/>Looking for a specific activity to do at the parks?
                     Select one or more of the following activities</p>

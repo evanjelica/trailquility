@@ -6,7 +6,7 @@ import '../css/MainStyle.css';
 
 
 const url =
-  'https://developer.nps.gov/api/v1/activities?api_key=D855RRWRdxxbOPhPBfKd8HQfj4rt0kBtFCNKqNVa';
+  'https://developer.nps.gov/api/v1/activities?api_key=${process.env.NPS_API_KEY}'
 
 
 export default function Activities({filter, selection, addSelection, clear}){
