@@ -4,8 +4,9 @@ import ParkCard from './ParkCard';
 
 import '../css/MainStyle.css';
 
-const url =
-  'https://developer.nps.gov/api/v1/parks?limit=496&api_key=D855RRWRdxxbOPhPBfKd8HQfj4rt0kBtFCNKqNVa';
+const API_KEY = process.env.REACT_APP_NPS_API_KEY
+// Key used to access all of the parks from the API
+const url =`https://developer.nps.gov/api/v1/parks?limit=496&api_key=${API_KEY}`;
 
 export default function Parks(){
 
@@ -49,7 +50,6 @@ export default function Parks(){
                                         data={data}/>
                                 )
                             })}
-
                     </div>
                     
  

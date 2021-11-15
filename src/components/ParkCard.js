@@ -19,7 +19,7 @@ const ParkCard = (props) =>{
                 <p className="card-designation">{data.designation}</p>
                 <img className="card-img" 
                 src={data.images[0].url} alt=''/>
-                <p className="card-subtitle">State: {data.states}</p>
+                <p className="card-states">State(s): {data.states}</p>
                 <p className="card-subtitle">Description</p>
                 <p className="card-description">{data.description}</p>
 
@@ -28,27 +28,28 @@ const ParkCard = (props) =>{
             </div>
         );
     // If user clicks Learn More!
-    // Display more information under the default
+    // Expand card to display more information under the default
     }else{
         return(
             <div className="park-card">
                 <h2 class="card-name">{data.fullName}</h2>
-                <p class="card-designation">{data.designation}</p>
-                <img class="card-img" 
+                <p className="card-designation">{data.designation}</p>
+                <img className="card-img" 
                 src={data.images[0].url} alt=''/>
-                <p class="card-subtitle">State: {data.states}</p>
-                <p class="card-subtitle">Description</p>
-                <p class="card-description">{data.description}</p>
+                <p className="card-states">State(s): {data.states}</p>
+                <p className="card-subtitle">Description</p>
+                <p className="card-description">{data.description}</p>
                 
                 {/* Additional info shown after clikcing Learn More */}
-                <p class="card-subtitle">Latitude and Longitude</p>
-                <p class="card-description">{data.latLong}</p>
-                <p class="card-subtitle">Where is it?</p>
-                <p class="card-description">{data.directionsInfo}</p>
-                <p class="card-description">{data.directionsUrl}</p>
-                <p class="card-subtitle">Park Website</p>
-                <p class="card-description">{data.url}</p>
-
+                <a className="card-link" href={data.url} target="_blank" rel="noreferrer">Park Website</a>
+                <br/>
+                <p className="card-subtitle">Latitude and Longitude</p>
+                <p className="card-description">{data.latLong}</p>
+                <p className="card-subtitle">Where is it?</p>
+                <p className="card-description">{data.directionsInfo}</p>
+                <a className="card-link" href={data.directionsUrl}>Link to park directions</a>
+                <br/>
+                <br/>
                 <Button color="success" variant="contained"
                     onClick={() => setMoreParkInfo(!moreParkInfo)}>See Less</Button>
             </div>

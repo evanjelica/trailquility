@@ -6,11 +6,10 @@ import '../css/Card.css'
 function StreamCard (props) {
     const {parkCode} = props
     
-
-    const webStreamUrl = `https://developer.nps.gov/api/v1/webcams?parkCode=${parkCode}&api_key=D855RRWRdxxbOPhPBfKd8HQfj4rt0kBtFCNKqNVa`;
-
-    const parkUrl = `https://developer.nps.gov/api/v1/parks?parkCode=${parkCode}&api_key=D855RRWRdxxbOPhPBfKd8HQfj4rt0kBtFCNKqNVa`;
-
+    const API_KEY = process.env.REACT_APP_NPS_API_KEY
+    // Key used to access all of the parks from the API
+    const webStreamUrl = `https://developer.nps.gov/api/v1/webcams?parkCode=${parkCode}&api_key=${API_KEY}`;
+    const parkUrl = `https://developer.nps.gov/api/v1/parks?parkCode=${parkCode}&api_key=${API_KEY}`;
 
     // State variables
     const [showStream, setShowStream] = useState(false);

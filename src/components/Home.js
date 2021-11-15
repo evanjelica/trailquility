@@ -16,13 +16,12 @@ export default function Home(){
         <div className="overlay">
             <div className="header">
 
-                <a href to= "/">
-                    <h1>trailquility.</h1>
-                </a>
-                
+                <h1>trailquility.</h1>
+                <h5>experience tranquility on nature's trails.</h5>
+
                 <div className="glass-container">
-                    <p className="glass-font">Looking to experience some tranquility on nature's trails?
-                    <br/> Powered by the National Park Service API, Trailquility let's you search up National Parks across America!</p>
+                    <p className="glass-font">Powered by the National Park Service API, 
+                    <br/> Trailquility let's you search up National Parks across America!</p>
 
                     <a href="/parks">
                         <Button  color="success" variant="contained">Find some parks!</Button>

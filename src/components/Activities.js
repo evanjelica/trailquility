@@ -4,9 +4,10 @@ import Activity from './Activity';
 
 import '../css/MainStyle.css';
 
-//const API_KEY = 'process.env.REACT_APP_NPS_API_KEY';
+const API_KEY = process.env.REACT_APP_NPS_API_KEY
+// Key used to access all of the parks from the API
 const url =
-  'https://developer.nps.gov/api/v1/activities?api_key=D855RRWRdxxbOPhPBfKd8HQfj4rt0kBtFCNKqNVa';
+  `https://developer.nps.gov/api/v1/activities?api_key=${API_KEY}`;
 
 
 export default function Activities({filter, selection, addSelection, clear}){
@@ -25,7 +26,6 @@ export default function Activities({filter, selection, addSelection, clear}){
     useEffect(() =>{
         fetchData();
     }, []);
-
 
     return(
         <div>

@@ -4,8 +4,10 @@ import StreamCard from './StreamCard';
 
 import '../css/MainStyle.css';
 
-//const parkUrl = `https://developer.nps.gov/api/v1/parks?limit=496&api_key=D855RRWRdxxbOPhPBfKd8HQfj4rt0kBtFCNKqNVa`;
-//const webcamUrl = `https://developer.nps.gov/api/v1/webcams?api_key=D855RRWRdxxbOPhPBfKd8HQfj4rt0kBtFCNKqNVa`;
+//const API_KEY = process.env.REACT_APP_NPS_API_KEY
+// Key used to access all of the parks from the API
+//const parkUrl = `https://developer.nps.gov/api/v1/parks?limit=496&api_key=${API_KEY}`;
+//const webcamUrl = `https://developer.nps.gov/api/v1/webcams?api_key=${API_KEY}`;
 
 export default function ParkStream(props){
     const { streamList } = props;

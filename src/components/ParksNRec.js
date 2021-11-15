@@ -5,9 +5,10 @@ import ParkCard from './ParkCard';
 
 import '../css/MainStyle.css';
 
+const API_KEY = process.env.REACT_APP_NPS_API_KEY
 // Key used to access all of the parks from the API
 const url =
-  'https://developer.nps.gov/api/v1/parks?limit=496&api_key=D855RRWRdxxbOPhPBfKd8HQfj4rt0kBtFCNKqNVa';
+  `https://developer.nps.gov/api/v1/parks?limit=496&api_key=${API_KEY}`;
 
 export default function ParksNRec(){
 
@@ -77,8 +78,8 @@ export default function ParksNRec(){
                 <div className="glass-container">
 
                     <p className="glass-font">National parks are nature's bounty of activities!
-                    <br/>Looking for a specific activity to do at the parks?
-                    Select one or more of the following activities</p>
+                    <br/>Looking for a specific activity but not sure which park has it?
+                    <br/>Select one or more of the following activities to filter through the options!</p>
 
                     {/* Lists out all activities for user to choose from*/}
                     <Activities
