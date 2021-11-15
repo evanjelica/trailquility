@@ -4,8 +4,7 @@ import StreamCard from './StreamCard';
 
 import '../css/MainStyle.css';
 
-const parkUrl =
-  'https://developer.nps.gov/api/v1/parks?limit=496&api_key=D855RRWRdxxbOPhPBfKd8HQfj4rt0kBtFCNKqNVa';
+//const parkUrl = `https://developer.nps.gov/api/v1/parks?limit=496&api_key=D855RRWRdxxbOPhPBfKd8HQfj4rt0kBtFCNKqNVa`;
 //const webcamUrl = `https://developer.nps.gov/api/v1/webcams?api_key=D855RRWRdxxbOPhPBfKd8HQfj4rt0kBtFCNKqNVa`;
 
 export default function ParkStream(props){
@@ -15,6 +14,16 @@ export default function ParkStream(props){
     const [loading, setLoading] = useState(true);
    // const [parkList, setParkList] = useState([]);
 
+   const fetchData = async () =>{
+
+    setLoading(false);
+   }
+
+    // Initially renders component once to fetch API data
+    useEffect(() =>{
+        fetchData();
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
    /*
     const getParksAndStreams = async () => {
         const parksRes = await fetch(parkUrl);
@@ -47,9 +56,6 @@ export default function ParkStream(props){
                                 />
                             );
                         })}
-                        {console.log(streamList)}
-                        {console.log("streamList")}
-
                     </div> 
 
                 </div>

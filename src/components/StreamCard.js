@@ -7,11 +7,9 @@ function StreamCard (props) {
     const {parkCode} = props
     
 
-    const webStreamUrl =
-    `https://developer.nps.gov/api/v1/webcams?parkCode=${parkCode}&api_key=D855RRWRdxxbOPhPBfKd8HQfj4rt0kBtFCNKqNVa`;
+    const webStreamUrl = `https://developer.nps.gov/api/v1/webcams?parkCode=${parkCode}&api_key=D855RRWRdxxbOPhPBfKd8HQfj4rt0kBtFCNKqNVa`;
 
-    const parkUrl =
-    'https://developer.nps.gov/api/v1/parks?parkCode=${parkCode}&api_key=D855RRWRdxxbOPhPBfKd8HQfj4rt0kBtFCNKqNVa';
+    const parkUrl = `https://developer.nps.gov/api/v1/parks?parkCode=${parkCode}&api_key=D855RRWRdxxbOPhPBfKd8HQfj4rt0kBtFCNKqNVa`;
 
 
     // State variables
@@ -34,6 +32,7 @@ function StreamCard (props) {
      // Initially renders component once to fetch API data
      useEffect(() =>{
         fetchData();
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [parkCode]);
 
     if(loading)

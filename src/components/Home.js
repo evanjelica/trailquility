@@ -34,7 +34,7 @@ export default function Home(){
 
         <div className="footer">
                 <p>Entry for Capital One Software Engineering Summit 2021</p>
-                <p>Built with React by <a href="https://evanjelica.github.io/" target="_blank">Anjelica Avorque</a></p>
+                <p>Built with React by <a href="https://evanjelica.github.io/" target="_blank" rel="noreferrer">Anjelica Avorque</a></p>
         </div>
     </div>
     )
