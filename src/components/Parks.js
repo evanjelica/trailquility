@@ -41,7 +41,7 @@ export default function Parks(){
 
                     <div className="card-grid-list">
                             {loading?
-                            <p className="card-loading">Currently fetching data...</p>
+                            <p className="card-loading">Fetching data...please wait...</p>
                             :
                             parkList.data.map((data) =>{
                                 return(

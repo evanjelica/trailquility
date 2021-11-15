@@ -76,7 +76,7 @@ export default function ParksNRec(){
                 <Header/>
                 
                 <div className="glass-container">
-                    
+
                     <p className="glass-font">National parks are nature's bounty of activities!
                     <br/>Looking for a specific activity to do at the parks?
                     Select one or more of the following activities</p>
@@ -92,7 +92,7 @@ export default function ParksNRec(){
 
                     <div className="card-grid">
                             {loading?
-                            <p className="card-loading">Currently fetching data...</p>
+                            <p className="card-loading">Fetching data...please wait...</p>
                             :
                             parkList.data.map((data, idx) =>{
                                 return(

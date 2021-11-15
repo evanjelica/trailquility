@@ -11,6 +11,7 @@ const webcamUrl = `https://developer.nps.gov/api/v1/webcams?api_key=D855RRWRdxxb
 export default function ParkStream(props){
     const { streamList } = props;
 
+    // State variables
     const [loading, setLoading] = useState(true);
     const [parkList, setParkList] = useState([]);
 
@@ -19,7 +20,6 @@ export default function ParkStream(props){
         let parks = await parksRes.json();
         if (!parks || !parks.data) console.error('No data was found');
         parks = parks.data
-
          
         
     }
@@ -38,7 +38,7 @@ export default function ParkStream(props){
 
                     <div className="card-grid">
                         {loading?
-                            <p className="card-loading">Currently fetching data...</p>
+                            <p className="card-loading">Fetching stream...please wait...</p>
                             :
                         streamList && streamList.map((item) =>{
                             return(

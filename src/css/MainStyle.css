@@ -110,14 +110,15 @@ ul{
 .footer{    
     font-size: 13px;
     line-height: 0.4;
-    color: white;
+    color: #caf834;
     position: absolute;
     left: 0;
     bottom: 0;
     width: 100%;
-    text-align: center;
+    text-align: left;
     margin-top: auto;
-    padding-bottom: 10px;
+    padding-bottom: 20px;
+    padding-left: 20px;
 }
 .footer-bonus{    
     font-size: 13px;
@@ -129,10 +130,16 @@ ul{
     width: 100%;
     text-align: left;
     margin-top: auto;
-    padding-bottom: 20px;
+    padding-bottom: 0px;
     padding-left: 20px;
 }
 a{
     text-decoration: none;
-    color: white;
+    color: #caf834;
+}
+.p-bonus{
+    color:white;
+}
+.link-bonus{
+    color:#caf834;
 }
