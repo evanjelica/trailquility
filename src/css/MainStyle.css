@@ -16,7 +16,6 @@
 }
 
 .video-background {
-    position: relative;
     overflow: hidden;
     background-repeat: no-repeat;
     width: 100vw;
@@ -35,6 +34,7 @@
 #video{
     width: 100%;
     object-fit: contain;
+    position: fixed;
     
 }
 
@@ -88,8 +88,9 @@ ul{
     margin-left: auto;
     margin-right: auto;
 
-    width: 1300px;
+    width: 1500px;
     padding-bottom: 20px;
+    padding-left: 20px;
     background: rgba( 255, 255, 255, 0.40 );
     box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
     backdrop-filter: blur( 7px );

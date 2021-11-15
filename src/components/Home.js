@@ -21,7 +21,7 @@ export default function Home(){
                 </a>
                 
                 <div className="glass-container">
-                    <p className="glass-font">Powered by the National Park Service API. Trailquility let's you search up National Parks across the country!</p>
+                    <p className="glass-font">Powered by the National Park Service API. Trailquility let's you search up National Parks across America!</p>
 
                     <a href="/activities">
                         <Button  color="success" variant="contained">Find some parks!</Button>

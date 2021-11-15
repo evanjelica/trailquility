@@ -10,7 +10,7 @@ const url =
 export default function Parks(){
 
     // State variables
-    const [isLoading,setLoading] = useState(true);
+    const [loading,setLoading] = useState(true);
     const [parkList, setParkList] = useState([]);
 
     // Fetches the API data
@@ -39,6 +39,18 @@ export default function Parks(){
                     <Header/>
 
 
+                    <div className="card-grid-list">
+                            {loading?
+                            <p className="card-loading">Currently fetching data...</p>
+                            :
+                            parkList.data.map((data) =>{
+                                return(
+                                    <ParkCard
+                                        data={data}/>
+                                )
+                            })}
+
+                    </div>
                     
  
                    

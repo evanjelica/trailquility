@@ -1,0 +1,65 @@
+.card-loading{
+    text-align: center;
+    font-weight: bold;
+    padding: 10px;
+
+    background: rgba( 255, 255, 255, 0.60 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 7px );
+    -webkit-backdrop-filter: blur( 6.5px );
+    border-radius: 10px;
+    border: 2px solid rgba( 255, 255, 255, 0.18 );
+}
+.card-grid{
+    justify-items: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 9px;
+    grid-row-gap: 9px;
+
+}
+.card-grid-list{
+    justify-items: center;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 9px;
+    grid-row-gap: 9px;
+
+}
+.park-card{
+    background: rgba( 255, 255, 255, 0.60 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 7px );
+    -webkit-backdrop-filter: blur( 6.5px );
+    border-radius: 10px;
+    border: 2px solid rgba( 255, 255, 255, 0.18 );
+    padding-bottom: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.card-name{
+    font-size: 20px;
+    font-weight: bold;
+}
+.card-designation{
+    font-size: 15px;
+    text-transform: capitalize;
+    line-height: 0.2px;
+
+}
+.card-img{
+    height: 300px;
+    width: 300px;
+    object-fit: cover;
+}
+
+.card-subtitle{
+    text-align: left;
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 0.2px;
+}
+.card-description{
+    font-size: 14px;
+    text-align: left;
+}

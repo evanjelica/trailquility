@@ -13,7 +13,7 @@ export default function Header(){
                 </a>
                 <ul>
                     <a href="/activities">
-                        <Button  color="secondary" variant="contained">Filter by Activities</Button>
+                        <Button  color="secondary" variant="contained">Filter Parks by Activities</Button>
                     </a>
                 </ul>
                 <ul>
@@ -23,12 +23,12 @@ export default function Header(){
                 </ul>
                 <ul>
                     <a href="/streams">
-                        <Button  color="secondary" variant="contained">Park Stream</Button>
+                        <Button  color="secondary" variant="contained">Watch a Park Stream</Button>
                     </a>
                 </ul>
                 <ul>
                     <a href="/the-view">
-                        <Button  color="secondary" variant="contained">Enjoy the view!</Button>
+                        <Button  color="secondary" variant="contained">Enjoy the view</Button>
                     </a>
                 </ul>
           </div>
