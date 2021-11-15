@@ -1,8 +1,6 @@
 import React from 'react';
 import Button from '@mui/material/Button';
 
-
-
 import '../css/MainStyle.css';
 
 export default function Home(){
