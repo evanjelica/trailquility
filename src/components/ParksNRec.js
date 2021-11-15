@@ -16,7 +16,6 @@ export default function ParksNRec(){
     const [activitySelection, setActivitySelection] = useState([]);
     const [parkList, setParkList] = useState([]);
     const [loading, setLoading] = useState(true);
- //   const [activityFilter,setActivityFilter] = useState([]);
 
      // Initially renders component once to fetch API data
     useEffect(() => {
@@ -30,31 +29,22 @@ export default function ParksNRec(){
         setParkList(info);
         setLoading(false);
     }
-
+    
+    // Filters list of parks based on user's chosen activities
+    const filterActivities = (id) => {
+        setParkList({
+            ...parkList,
+            data: parkList.data.filter((park) =>
+            park.activities.map((parkItem) => parkItem.id === id).includes(true))
+        })
+    }
+    
     // Adds activities chosen by the user to a list
     const selectedActivity = (name) => {
         if(activitySelection.includes(name)){
             setActivitySelection([...activitySelection, name]);
         }
     };
-
-    // Filters list of parks based on user's chosen activities
-    const filterActivities = (id) => {
-        setParkList({
-            ...parkList,
-            data: parkList.data.filter((park) =>
-                park.activities.map((parkItem) => parkItem.id === id).includes(true))
-        })
-    }
-
-    /*// Prints out the filters chosen by the user
-    const filterActivityList = (id) =>{
-        setActivityFilter({
-            ...parkList,
-            data: parkList.data.filter((park) =>
-                park.activities.map((parkItem) => parkItem.id === id).includes(true))
-        })
-    }*/
 
     // Clears activity selection
     const clear = () => {
@@ -89,8 +79,13 @@ export default function ParksNRec(){
                         filter={filterActivities}
                         activitySelection={activitySelection}
                     />
+                    <br/>
+                    <br/>
 
+                    {/* Renders all of the parks below in card format*/}
                     <div className="card-grid">
+                            {/* If array is empty, print the loading string,
+                                otherwise, display cards of parks*/}
                             {loading?
                             <p className="card-loading">Fetching data...please wait...</p>
                             :
@@ -103,9 +98,7 @@ export default function ParksNRec(){
                     </div>
                 </div>
             </div>
-        </div>
-
-        
+        </div>    
     </div>
     )
     

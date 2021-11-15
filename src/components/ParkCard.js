@@ -41,13 +41,13 @@ const ParkCard = (props) =>{
                 <p className="card-description">{data.description}</p>
                 
                 {/* Additional info shown after clikcing Learn More */}
-                <a className="card-link" href={data.url} target="_blank" rel="noreferrer">Park Website</a>
+                <a className="card-link" href={data.url} target="_blank" rel="noreferrer">Learn more from their website</a>
                 <br/>
                 <p className="card-subtitle">Latitude and Longitude</p>
                 <p className="card-description">{data.latLong}</p>
                 <p className="card-subtitle">Where is it?</p>
                 <p className="card-description">{data.directionsInfo}</p>
-                <a className="card-link" href={data.directionsUrl}>Link to park directions</a>
+                <a className="card-link" href={data.directionsUrl} target="_blank" rel="noreferrer">Link to park directions</a>
                 <br/>
                 <br/>
                 <Button color="success" variant="contained"

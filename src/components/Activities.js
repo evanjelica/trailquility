@@ -45,7 +45,7 @@ export default function Activities({filter, selection, addSelection, clear}){
                             })}
                         </p>
 
-                        <p>You have currently selected:</p>
+                        <p className="p-activities">You have currently selected:</p>
                         {selection && selection.map((selected) => {
                             return <p>{selected}</p>
                         })}

@@ -47,7 +47,8 @@ export default function Parks(){
                             parkList.data.map((data) =>{
                                 return(
                                     <ParkCard
-                                        data={data}/>
+                                        data={data}
+                                    />
                                 )
                             })}
                     </div>

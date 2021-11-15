@@ -121,10 +121,16 @@ ul{
     font-weight: bold;
     color: #283618;
     text-decoration: solid;
-
+}
+.glass-font-stream{
+    font-size: 20px;
+    font-weight: bold;
+    color: #283618;
+    text-decoration: solid;
 }
 
 .footer{    
+    font-weight: bold;   
     font-size: 13px;
     line-height: 0.4;
     color: #caf834;
@@ -134,7 +140,16 @@ ul{
     text-align: left;
     margin-top: auto;
 }
-.footer-bonus{    
+
+.p-activities{
+    font-weight: bold;
+    font-size: 20px;
+    color: #283618;
+
+}
+
+.footer-bonus{ 
+    font-weight: bold;   
     font-size: 13px;
     line-height: 0.4;
     color: white;

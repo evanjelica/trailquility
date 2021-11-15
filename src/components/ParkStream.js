@@ -4,36 +4,29 @@ import StreamCard from './StreamCard';
 
 import '../css/MainStyle.css';
 
-//const API_KEY = process.env.REACT_APP_NPS_API_KEY
+const API_KEY = process.env.REACT_APP_NPS_API_KEY
 // Key used to access all of the parks from the API
-//const parkUrl = `https://developer.nps.gov/api/v1/parks?limit=496&api_key=${API_KEY}`;
-//const webcamUrl = `https://developer.nps.gov/api/v1/webcams?api_key=${API_KEY}`;
+const webStreamUrl = `https://developer.nps.gov/api/v1/webcams?parkCode=&api_key=${API_KEY}`;
 
-export default function ParkStream(props){
-    const { streamList } = props;
+export default function ParkStream(){
 
     // State variables
     const [loading, setLoading] = useState(true);
-   // const [parkList, setParkList] = useState([]);
+    const [streamList, setStreamList] = useState([]);
 
-   const fetchData = async () =>{
-
-    setLoading(false);
-   }
+     // Fetches the API data
+    const fetchData = async () =>{
+        const data = await fetch(webStreamUrl);
+        const info = await data.json();
+        setStreamList(info);
+        setLoading(false);
+    }
 
     // Initially renders component once to fetch API data
     useEffect(() =>{
         fetchData();
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
-   /*
-    const getParksAndStreams = async () => {
-        const parksRes = await fetch(parkUrl);
-        let parks = await parksRes.json();
-        if (!parks || !parks.data) console.error('No data was found');
-        parks = parks.data
-    }
-*/
 
     return(
         <div className="video-background">
@@ -45,19 +38,26 @@ export default function ParkStream(props){
             <div className="overlay">
                 <div className="header">
                     <Header/>
+                
+                    <div className="glass-container">
 
-                    <div className="card-grid">
-                        {loading?
-                            <p className="card-loading">Fetching stream...please wait...</p>
+                        <p className="glass-font-stream">National parks are nature's bounty of activities!
+                        <br/>Do note that some of them probably won't have an image available</p>
+                    </div>
+
+                    <br/>
+
+                    <div className="card-grid-list">
+                       {loading?
+                            <p className="card-loading">Fetching images...please wait...</p>
                             :
-                        streamList && streamList.map((item) =>{
+                        streamList.data.map((data) =>{
                             return(
                                 <StreamCard
-                                    key={item}
-                                    parkCode={item}
+                                    data={data}
                                 />
                             );
-                        })}
+                        })}  
                     </div> 
 
                 </div>
