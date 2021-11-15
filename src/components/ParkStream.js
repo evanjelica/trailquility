@@ -40,9 +40,8 @@ export default function ParkStream(){
                     <Header/>
                 
                     <div className="glass-container">
-
-                        <p className="glass-font-stream">National parks are nature's bounty of activities!
-                        <br/>Do note that some of them probably won't have an image available</p>
+                        <p className="glass-font-stream">Below is a list of non-streaming images collected from the park webcams!
+                        <br/>Do note that some of them won't have an image available for viewing</p>
                     </div>
 
                     <br/>
