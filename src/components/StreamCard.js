@@ -11,12 +11,11 @@ const StreamCard = (props)=>{
     const [showStream, setShowStream] = useState(false);
 
     // Defualt state: if user does not click Show Stream
-    // Display the following
     if(!showStream){
         return(
             <div>
                 <div className="park-card">
-                    <h2 className="card-name">{data.title}</h2>
+                    <h3 className="card-name">{data.title}</h3>
 
                     <Button color="success" variant="contained"
                         onClick={() => setShowStream(!showStream)}>Show Stream</Button>                     
@@ -30,8 +29,8 @@ const StreamCard = (props)=>{
             <div className="park-card">
                     <h2 className="card-name">{data.title}</h2>
 
-                    {/* Additional info shown after clikcing Show Stream */}
-                    <p>Stream not available</p>
+                    {/* Additional info shown after clicking Show Stream */}
+                    <h4>Stream not available</h4>
 
                     <Button color="success" variant="contained"
                         onClick={() => setShowStream(!showStream)}>Close Stream</Button>    
@@ -44,7 +43,7 @@ const StreamCard = (props)=>{
                 <div className="park-card">
                     <h2 className="card-name">{data.title}</h2>
 
-                    {/* Additional info shown after clikcing Show Stream */}
+                    {/* Additional info shown after clicking Show Stream */}
                     <img className="card-img" 
                     src={data.images[0].url} alt=''/>
                     <p className="card-description">{data.description}</p>

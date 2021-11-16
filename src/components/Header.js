@@ -1,13 +1,14 @@
 import React from 'react';
-import '../css/MainStyle.css';
 import Button from '@mui/material/Button';
 
+import '../css/MainStyle.css';
  
-
+// Header/Navbar that is displayed on top of Parks.js, ParksNRec.js and ParkStream.js
 export default function Header(){
     return(
         <div>
             <div className="header">
+                
                 <a href="/">
                     <h1>trailquility.</h1>
                 </a>
@@ -31,8 +32,8 @@ export default function Header(){
                         <Button  color="secondary" variant="contained">Enjoy the view</Button>
                     </a>
                 </ul>
+
           </div>
-            
         </div>
     )
 };

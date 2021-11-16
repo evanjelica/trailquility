@@ -4,8 +4,8 @@ import StreamCard from './StreamCard';
 
 import '../css/MainStyle.css';
 
-const API_KEY = process.env.REACT_APP_NPS_API_KEY
 // Key used to access all of the parks from the API
+const API_KEY = process.env.REACT_APP_NPS_API_KEY
 const webStreamUrl = `https://developer.nps.gov/api/v1/webcams?parkCode=&api_key=${API_KEY}`;
 
 export default function ParkStream(){
@@ -25,16 +25,18 @@ export default function ParkStream(){
     // Initially renders component once to fetch API data
     useEffect(() =>{
         fetchData();
-        // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     return(
         <div className="video-background">
-
+            
+            {/* Displays video background */}
             <video autoPlay="autoplay" loop="loop" muted id="video">
                 <source src="/video/videoBackground.mp4" type="video/mp4"></source>
             </video>
-    
+
+            {/* Div that allows things to overlay on top of the video */}
             <div className="overlay">
                 <div className="header">
                     <Header/>
@@ -46,7 +48,11 @@ export default function ParkStream(){
 
                     <br/>
 
+                    {/* Renders park cards in grid format */}
                     <div className="card-grid-list">
+
+                        {/* If information or API is not working, print the loading string
+                            Otherwise display the cards */}
                        {loading?
                             <p className="card-loading">Fetching images...please wait...</p>
                             :
@@ -56,7 +62,8 @@ export default function ParkStream(){
                                     data={data}
                                 />
                             );
-                        })}  
+                        })}
+
                     </div> 
 
                 </div>

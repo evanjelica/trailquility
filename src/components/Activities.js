@@ -4,11 +4,9 @@ import Activity from './Activity';
 
 import '../css/MainStyle.css';
 
-const API_KEY = process.env.REACT_APP_NPS_API_KEY
 // Key used to access all of the parks from the API
-const url =
-  `https://developer.nps.gov/api/v1/activities?api_key=${API_KEY}`;
-
+const API_KEY = process.env.REACT_APP_NPS_API_KEY
+const url = `https://developer.nps.gov/api/v1/activities?api_key=${API_KEY}`;
 
 export default function Activities({filter, selection, addSelection, clear}){
 
@@ -29,6 +27,7 @@ export default function Activities({filter, selection, addSelection, clear}){
 
     return(
         <div>
+            {/* Button clears out all activities chosen by the user */}
             <Button  color="warning" variant="contained" onClick={clear}>Clear</Button>
                         
                         {/* Lists out all activities for user to choose from*/}
@@ -45,7 +44,7 @@ export default function Activities({filter, selection, addSelection, clear}){
                             })}
                         </p>
 
-                        <p className="p-activities">You have currently selected:</p>
+                        <p className="p-activities">The following parks have your selected activities available:</p>
                         {selection && selection.map((selected) => {
                             return <p>{selected}</p>
                         })}

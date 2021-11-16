@@ -5,10 +5,9 @@ import ParkCard from './ParkCard';
 
 import '../css/MainStyle.css';
 
-const API_KEY = process.env.REACT_APP_NPS_API_KEY
 // Key used to access all of the parks from the API
-const url =
-  `https://developer.nps.gov/api/v1/parks?limit=496&api_key=${API_KEY}`;
+const API_KEY = process.env.REACT_APP_NPS_API_KEY
+const url = `https://developer.nps.gov/api/v1/parks?limit=496&api_key=${API_KEY}`;
 
 export default function ParksNRec(){
 
@@ -30,6 +29,13 @@ export default function ParksNRec(){
         setLoading(false);
     }
     
+    // Adds activities chosen by the user to a list
+    const selectedActivity = (name) => {
+        if(activitySelection.includes(name)){
+            setActivitySelection([...activitySelection, name]);
+        }
+    };
+
     // Filters list of parks based on user's chosen activities
     const filterActivities = (id) => {
         setParkList({
@@ -38,13 +44,6 @@ export default function ParksNRec(){
             park.activities.map((parkItem) => parkItem.id === id).includes(true))
         })
     }
-    
-    // Adds activities chosen by the user to a list
-    const selectedActivity = (name) => {
-        if(activitySelection.includes(name)){
-            setActivitySelection([...activitySelection, name]);
-        }
-    };
 
     // Clears activity selection
     const clear = () => {
@@ -56,10 +55,12 @@ export default function ParksNRec(){
     return(
     <div className="video-background">
 
+        {/* Displays video background */}
         <video autoPlay="autoplay" loop="loop" muted id="video">
             <source src="/video/videoBackground.mp4" type="video/mp4"></source>
         </video>
 
+        {/* Div that allows things to overlay on top of the video */}
         <div className="overlay">
             <div className="header">
 
@@ -96,6 +97,7 @@ export default function ParksNRec(){
                                     )
                                 })}
                     </div>
+                    
                 </div>
             </div>
         </div>    

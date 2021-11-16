@@ -1,3 +1,7 @@
+/*----------------------------------------------
+CSS Styling used by the following:
+StreamCard.js, ParkCard.js
+----------------------------------------------*/
 .card-loading{
     text-align: center;
     font-weight: bold;
@@ -10,6 +14,11 @@
     border-radius: 10px;
     border: 2px solid rgba( 255, 255, 255, 0.18 );
 }
+
+/*----------------------------------------------
+    Styling on card grid display on
+    Parks.js, ParkStream.js and ParksNRec.js
+----------------------------------------------*/
 .card-grid{
     justify-items: center;
     display: grid;
@@ -26,6 +35,10 @@
     grid-row-gap: 16px;
 
 }
+
+/*----------------------------------------------
+    Styling for general layout of card
+----------------------------------------------*/
 .park-card{
     background: rgba( 255, 255, 255, 0.60 );
     box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );

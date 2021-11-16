@@ -11,7 +11,6 @@ const ParkCard = (props) =>{
     const [moreParkInfo, setMoreParkInfo] = useState(false);
 
     // Defualt state: if user does not click Learn More!
-    // Display the following
     if(!moreParkInfo){
         return (
             <div className="park-card">
