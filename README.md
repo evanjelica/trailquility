@@ -10,7 +10,9 @@ Trailquility is a web application that utilizes the [National Park Service API](
 ----
 ## Ideation
 
-Before I started coding the website, I drafted out my first idea on Figma so I could better visualize the site as I was coding. Originally, I had the idea to add a parallax effect on flat 2D assets of mountains and trees. As the cursor moved, so would the background. However, as the site started to come together, I was not able to execute the idea well enough to my standards. So I scraped the whole parallax idea altogether and decided to try something else. Despite that, I was still holdong on to the idea of having a moving background, so I wanted to try implementing a video background. Thankfully, that attempt was a success as evident by the website.
+Before I started coding the website, I drafted out my first idea on Figma so I could better visualize the site as I was coding. Originally, I had the idea to add a parallax effect on flat 2D assets of mountains and trees. As the cursor moved, so would the background. 
+
+However, as the site started to come together, I was not able to execute the idea well enough to my standards. So I scraped the whole parallax idea altogether and decided to try something else. Despite that, I was adamant about having a moving background, so I tried implementing a video background instead. Thankfully, that attempt was a success as evident by the website.
 
 <img src="public/readmeImages/Trailquility-conception.png" width="600">
 
