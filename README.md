@@ -2,12 +2,25 @@
 ### Submission for Capital One's 2021 Software Engineering Summit.
 ----
 ## What is Trailquility?
+Website Link: https://trailquility.vercel.app/
 Trailquility is a web application that utilizes the [National Park Service API](https://www.nps.gov/subjects/developer/get-started.htm) to give users information regarding National Parks in their area.
 
-It's front-end is made using React and material-ui and is deployed using Github Pages.
-## Demo
-
+----
+## Ideation
 
 ----
+## Technical Details
+----
+Trailquility's front-end is made using React and material-ui and is deployed through Vercel.
+
+The site consist of five main pages that the user can browse through using the navigation buttons laid throughout the site:
+- The Home/Landing page
+- List of all Parks
+- Filter Parks by Activities
+- Watch a Park Camera
+- A fun bonus page
+----
+### The Home Page
+----
 ## Challenges
-- Prior to this challenge, the only API I have ever utilized was the Google Maps API. So making API calls and testing was a challenge.
+- Making API calls and testing them. I haven't had any 
