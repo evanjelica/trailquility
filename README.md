@@ -3,6 +3,7 @@
 ----
 ## What is Trailquility?
 Website Link: https://trailquility.vercel.app/
+
 Trailquility is a web application that utilizes the [National Park Service API](https://www.nps.gov/subjects/developer/get-started.htm) to give users information regarding National Parks in their area.
 
 <img src="public/readmeImages/Trailquility-Home.png" width="500">
