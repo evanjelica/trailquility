@@ -62,3 +62,4 @@ Made using `ParkStream.js`, `StreamCard.js` and `Header.js`, Park Stream shows a
 ## Challenges
 - Trying to implement the original parallax background idea was technically challenging because every attempt I did was not up to my own personal standards. As a result, the entire idea was scrapped in favor of the video background idea.
 - Making API calls and testing them. I haven't had much experience dealing with APIs so trying to get them to render and to display the information I wanted was challanging.
+- Slow load times for images
